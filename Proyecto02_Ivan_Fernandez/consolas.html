@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Game Store</title>
+  <link rel="stylesheet" href="css/style.css" media="all">
+
+  <!-- Por alguna razon no me deja establecer un fondo de pantalla en el css asi que lo pongo aqui -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans Condensed', sans-serif;
+      background-image: url('images/background.jpg'); /* Imagen de fondo */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  </style>
+
+</head>
+
+<body>
+<!-- Header con Banner y Menu -->
+<header class="header">
+  <!-- Banner -->
+  <div class="banner">
+    <img src="images/banner.gif" alt="Video Game Store Banner" width="100%">
+  </div>
+
+  <!-- Menu -->
+  <nav class="menu menu-4">
+    <div class="menu-container">
+      <!-- GIF pequeño a la izquierda -->
+      <div class="menu-gif">
+        <img src="images/may.gif" alt="GIF Pequeño">
+      </div>
+
+      <!-- Botón para desplegar el menú en pantallas pequeñas -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Menú de navegación -->
+      <ul id="menu" class="menu-list">
+        <li><a href="index.html">Historia de los Videojuegos</a></li>
+        <li><a href="juegos_disponibles.html">Juegos disponibles</a></li>
+        <li><a href="consolas.html">Consolas disponibles</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<main>
+  <!-- Fake publicidad -->
+  <div class="publicidad1">
+    <button class="cerrar" onclick="cerrarPublicidad('publicidad1')">X</button>
+    <img src="images/magneto.gif" alt="Publicidad Falsa1" class="img-publicidad1">
+  </div>
+
+  <section id="consolas-disponibles">
+    <div class="contenedor-seccion">
+      <h2>Consolas Disponibles</h2>
+      <div class="consolas-grid">
+        <div class="consola">
+          <h3>PlayStation 5</h3>
+          <p><strong>Características:</strong></p>
+          <ul>
+            <li>CPU: AMD Zen 2</li>
+            <li>GPU: AMD RDNA 2</li>
+            <li>Almacenamiento: 825 GB SSD</li>
+            <li>Resolución: 4K a 120Hz</li>
+            <li>Compatibilidad: Retrocompatible con PS4</li>
+          </ul>
+          <div class="imagen-consola">
+            <img src="images/play.jpg" alt="PlayStation 5" class="consola-img">
+          </div>
+        </div>
+
+        <div class="consola">
+          <h3>Xbox Series X</h3>
+          <p><strong>Características:</strong></p>
+          <ul>
+            <li>CPU: AMD Zen 2</li>
+            <li>GPU: AMD RDNA 2</li>
+            <li>Almacenamiento: 1 TB SSD</li>
+            <li>Resolución: 4K a 120Hz</li>
+            <li>Compatibilidad: Retrocompatible con Xbox One</li>
+          </ul>
+          <div class="imagen-consola">
+            <img src="images/xbox.jpg" alt="Xbox Series X" class="consola-img">
+          </div>
+        </div>
+
+        <div class="consola">
+          <h3>Nintendo Switch</h3>
+          <p><strong>Características:</strong></p>
+          <ul>
+            <li>CPU: NVIDIA Tegra X1</li>
+            <li>GPU: NVIDIA Maxwell</li>
+            <li>Almacenamiento: 32 GB (expandible)</li>
+            <li>Resolución: 720p en modo portátil, 1080p en modo TV</li>
+            <li>Compatibilidad: Juegos de la familia Switch</li>
+          </ul>
+          <div class="imagen-consola">
+            <img src="images/switch.jpg" alt="Nintendo Switch" class="consola-img">
+          </div>
+        </div>
+
+        <div class="consola">
+          <h3>PlayStation 4</h3>
+          <p><strong>Características:</strong></p>
+          <ul>
+            <li>CPU: AMD Jaguar</li>
+            <li>GPU: AMD GCN</li>
+            <li>Almacenamiento: 500 GB HDD</li>
+            <li>Resolución: 1080p</li>
+            <li>Compatibilidad: Retrocompatible con PS3 (algunos juegos)</li>
+          </ul>
+          <div class="imagen-consola">
+            <img src="images/play4.jpg" alt="PlayStation 4" class="consola-img">
+          </div>
+        </div>
+
+        <div class="consola">
+          <h3>Xbox One</h3>
+          <p><strong>Características:</strong></p>
+          <ul>
+            <li>CPU: AMD Jaguar</li>
+            <li>GPU: AMD GCN</li>
+            <li>Almacenamiento: 500 GB HDD</li>
+            <li>Resolución: 1080p</li>
+            <li>Compatibilidad: Retrocompatible con Xbox 360</li>
+          </ul>
+          <div class="imagen-consola">
+            <img src="images/xbox_one.jpg" alt="Xbox One" class="consola-img">
+          </div>
+        </div>
+
+        <div class="consola">
+          <h3>Nintendo 3DS</h3>
+          <p><strong>Características:</strong></p>
+          <ul>
+            <li>CPU: ARM11</li>
+            <li>GPU: DMP PICA200</li>
+            <li>Almacenamiento: 4 GB (expandible)</li>
+            <li>Resolución: 800x240 en modo 3D</li>
+            <li>Compatibilidad: Juegos de la familia Nintendo DS</li>
+          </ul>
+          <div class="imagen-consola">
+            <img src="images/3ds.jpg" alt="Nintendo 3DS" class="consola-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Otra publicidad -->
+  <div class="publicidad">
+    <button class="cerrar" onclick="cerrarPublicidad('publicidad')">X</button>
+    <img src="images/ryu.gif" alt="Publicidad Falsa" class="img-publicidad">
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="logo">
+    <img src="images/robert.gif" alt="Logo"> <!-- Logo aquí -->
+  </div>
+
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="/privacidad">Privacidad</a>
+      <a href="/legal">Legal</a>
+      <a href="/terminos">Términos</a>
+      <a href="/cookies">Política de cookies</a>
+      <a href="/ajustes-cookies">Ajustes de cookies</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank">
+        <img src="images/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://twitter.com" target="_blank">
+        <img src="images/logotipos.png" alt="Twitter">
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="images/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://youtube.com" target="_blank">
+        <img src="images/youtube.png" alt="YouTube">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- JavaScript para el menú hamburguesa -->
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active'); // Alterna la clase 'active' para mostrar/ocultar el menú
+  });
+
+  // Función para cerrar las publicidades
+  function cerrarPublicidad(id) {
+    var publicidad = document.querySelector(`.${id}`);
+    publicidad.style.display = 'none'; // Oculta la publicidad
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Game Store</title>
+  <link rel="stylesheet" href="css/style.css" media="all">
+
+  <!-- Por alguna razon no me deja establecer un fondo de pantalla en el css asi que lo pongo aqui -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans Condensed', sans-serif;
+      background-image: url('images/background.jpg'); /* Imagen de fondo */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<!-- Header con Banner y Menu -->
+<header class="header">
+
+  <!-- Banner -->
+  <div class="banner">
+    <img src="images/banner.gif" alt="Video Game Store Banner" width="100%">
+  </div>
+
+  <!-- Menu -->
+  <nav class="menu menu-4">
+    <div class="menu-container">
+
+      <!-- GIF pequeño a la izquierda -->
+      <div class="menu-gif">
+        <img src="images/may.gif" alt="GIF Pequeño">
+      </div>
+
+      <!-- Botón para desplegar el menú en pantallas pequeñas -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Menú de navegación -->
+      <ul id="menu" class="menu-list">
+        <li><a href="index.html">Historia de los Videojuegos</a></li>
+        <li><a href="juegos_disponibles.html">Juegos disponibles</a></li>
+        <li><a href="consolas.html">Consolas disponibles</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+<main>
+
+  <!-- Fake publicidad -->
+  <div class="publicidad1">
+    <button class="cerrar" onclick="cerrarPublicidad('publicidad1')">X</button>
+    <img src="images/magneto.gif" alt="Publicidad Falsa1" class="img-publicidad1">
+  </div>
+
+  <main>
+    <!-- Sección de Contacto -->
+    <section id="contacto">
+      <!-- Espacio para el GIF del gato -->
+      <img src="images/cat.gif" alt="Gif de un gato" class="gif-gato">
+
+      <div class="formulario-container">
+        <h2>Formulario de Contacto</h2>
+        <form action="submit_form.php" method="POST">
+          <label for="nombre">Tu Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <label for="email">Tu Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensaje">Tu Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Otra publicidad FAKE-->
+  <div class="publicidad">
+    <button class="cerrar" onclick="cerrarPublicidad('publicidad')">X</button>
+    <img src="images/ryu.gif" alt="Publicidad Falsa" class="img-publicidad">
+  </div>
+</main>
+
+<div class="gif-derecha">
+  <img src="images/pixelart1.gif" alt="GIF Derecha 1" class="gif-derecha-img">
+</div>
+
+<div class="gif-derecha2">
+  <img src="images/gameover.png" alt="GIF Derecha 2" class="gif-derecha-img">
+</div>
+
+<div class="video-container">
+  <div class="video-wrapper">
+    <iframe
+            src="https://www.youtube.com/embed/sssqnrc9ZAQ?si=mi7UemCtrY-P4mZ7"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+    </iframe>
+  </div>
+  <h2>Game Trailer</h2>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="logo">
+    <img src="images/robert.gif" alt="Logo"> <!Gif de robert en el footer -->
+  </div>
+
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="/privacidad">Privacidad</a>
+      <a href="/legal">Legal</a>
+      <a href="/terminos">Términos</a>
+      <a href="/cookies">Política de cookies</a>
+      <a href="/ajustes-cookies">Ajustes de cookies</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank">
+        <img src="images/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://twitter.com" target="_blank">
+        <img src="images/logotipos.png" alt="Twitter">
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="images/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://youtube.com" target="_blank">
+        <img src="images/youtube.png" alt="YouTube">
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- JavaScript para el menú hamburguesa -->
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active'); // Alterna la clase 'active' para mostrar/ocultar el menú
+  });
+
+  // Función para cerrar las publicidades
+  function cerrarPublicidad(id) {
+    var publicidad = document.querySelector(`.${id}`);
+    publicidad.style.display = 'none'; // Oculta la publicidad
+  }
+</script>
+</body>
+</html>

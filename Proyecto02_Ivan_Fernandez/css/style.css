@@ -1,0 +1,1139 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+/* Cuerpo del documento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    margin: 0;
+    padding: 0;
+    font-family: "Press Start 2P", serif;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* --------Menu de navegacion superior ------*/
+
+
+
+.menu {
+    font-family: 'Press Start 2P', sans-serif;
+    padding: 10px 20px;
+    background: #6A1B9A;
+    position: relative;
+    z-index: 9999;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.banner {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    z-index: 10;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+.menu-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.menu-gif {
+    width: 100px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.menu-gif img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    top: 95px;
+    left: 0;
+    box-sizing: border-box;
+
+
+
+
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    font-size: clamp(0.8rem, 3vw, 1.2rem);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    position: relative;
+    padding: 4px 0;
+}
+
+.menu a::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #EC407A;
+    transition: 0.5s transform ease;
+    transform: scale3d(0, 1, 1);
+    transform-origin: 100% 50%;
+}
+
+.menu a:hover::before {
+    transform: scale3d(1, 1, 1);
+    transform-origin: 0 50%;
+}
+
+
+/* Estilos para el menú de hamburguesa */
+.menu-4 {
+    height: 95px;
+    padding: 0 20px;
+}
+
+.menu-4 ul {
+    justify-content: flex-start;
+}
+
+.menu-4 a {
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+/* Estilos para el botón de menú desplegable */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: space-between;
+    height: 25px;
+    width: 30px;
+}
+
+.bar {
+    background-color: white;
+    height: 4px;
+    width: 100%;
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #6A1B9A;
+        position: absolute;
+        top: 95px;
+        left: 0;
+        z-index: 2;
+    }
+
+    .menu ul.active {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu a {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
+    .menu-gif {
+        width: 80px;
+        height: 60px;
+    }
+
+
+    /* Alineación del GIF y el menú en pantallas pequeñas */
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Mostrar el botón de menú en pantallas pequeñas */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Ajuste de la altura del banner para pantallas pequeñas */
+    .banner {
+        height: 150px;
+    }
+}
+
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 10px;
+}
+
+/*----------------- Historia de los videojuegos -----------------------*/
+
+
+#historia-videojuegos .historia h3 {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    margin-bottom: 15px;
+    color: #6a1b9a;
+    border-left: 5px solid #6a1b9a;
+    padding-left: 15px;
+    font-weight: 600;
+}
+
+
+#historia-videojuegos {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    color: #333;
+    max-width: 90%;
+    margin: 20px auto;
+    font-family: 'Press Start 2P', sans-serif;
+    box-sizing: border-box;
+}
+
+#historia-videojuegos h2 {
+    text-align: center;
+    font-size: clamp(1.3rem, 6vw, 2rem);
+    margin-bottom: 20px;
+    color: #6a1b9a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+#historia-videojuegos .historia {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#historia-videojuegos .historia:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+#historia-videojuegos p {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+#historia-videojuegos ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+#historia-videojuegos li {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    margin-bottom: 10px;
+    list-style-type: disc;
+}
+
+@media (max-width: 768px) {
+    #historia-videojuegos {
+        padding: 20px;
+    }
+
+    #historia-videojuegos h2 {
+        font-size: clamp(1.8rem, 4vw, 2.2rem);
+    }
+
+
+
+    #historia-videojuegos p {
+        font-size: 1rem;
+    }
+
+    .pikachu {
+        width: 80px;
+        right: 30px;
+        top: 250px;
+    }
+}
+
+.pikachu {
+    width: 30%;
+    max-width: 100px;
+    height: auto;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -20%);
+    z-index: 10;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.pikachu:hover {
+    opacity: 1;
+}
+
+/*-------------------- Publicidad falsa ---------------------*/
+/* Publicidad 1 (izquierda) */
+.publicidad1 {
+    width: 400px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 66%;
+    left: 25px;
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+
+.img-publicidad1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Publicidad (derecha) */
+.publicidad {
+    width: 200px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 66%;
+    right: 100px;
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+
+.img-publicidad {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Contenido (historia de los videojuegos) */
+.contenido {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    z-index: 5;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Media Queries para responsive */
+@media (max-width: 1200px) {
+    .publicidad1 {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+        left: 20px;
+    }
+
+    .publicidad {
+        width: 180px;
+        height: 500px;
+        right: 20px;
+    }
+
+    .contenido {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .publicidad1,
+    .publicidad {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    .contenido {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .publicidad1,
+    .publicidad {
+        position: relative;
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+
+    .contenido {
+        font-size: 0.8rem;
+    }
+}
+
+/* Boton de cierre publicidad */
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*---------------------------- Footer ------------------------*/
+
+/* Estilo del footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6A1B9A;
+    padding: 20px 40px;
+    color: white;
+    z-index: 100;
+    width: 100%; /* Asegura que cubra todo el ancho */
+    position: relative; /* Para z-index y contenido interno */
+
+}
+
+.footer .logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer .logo img {
+    width: 120px;
+    height: auto;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    z-index: 1;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #EC407A;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Cambia a diseño vertical */
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer .logo img {
+        margin-bottom: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+
+    .social-icons a img {
+        width: 25px;
+    }
+}
+
+/* -------------Catalogo de juegos -------------*/
+
+#catalogo-juegos, #catalogo-juegos h2, .genres h3, .genres li {
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+#catalogo-juegos {
+    background-color: #f0f0f0;
+    padding: 60px 20px;
+    min-height: 400px;
+    max-height: 600px;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#catalogo-juegos h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #6a1b9a;
+    text-transform: uppercase;
+}
+
+.genres {
+    text-align: left;
+    animation: slideIn 1s ease-out;
+    width: 100%;
+    max-width: 800px;
+}
+
+.genres h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+.genres ul {
+    padding-left: 20px;
+    list-style-type: none;
+    margin: 0;
+}
+
+.genres li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #555;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.genres li:hover {
+    transform: translateX(10px);
+    color: #6a1b9a;
+}
+
+
+/*---------Gif Ditto ---------- */
+.ditto {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: -100px;
+}
+
+.ditto img {
+    width: 20vw;
+    height: auto;
+    max-width: 300px;
+}
+
+/* ------------------Galeria de Juegos ----------------*/
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin-top: 20px;
+    padding: 0 20px;
+
+}
+
+/* Estilos individuales para las tarjetas de juegos */
+.gallery-item {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(0);
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+    opacity: 0.8;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+/* Efectos responsivos */
+
+/* Resposive cartatulas de juegos */
+
+@media (max-width: 768px) {
+
+    .gallery-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        gap: 20px; /* Espacio entre elementos */
+    }
+
+    .gallery-item {
+        max-width: 90%; /* Asegura que las tarjetas ocupen un ancho adecuado */
+    }
+}
+
+/* Responsive Catalogo de juegos */
+
+@media (max-width: 768px) {
+    #catalogo-juegos {
+        padding: 40px 15px;
+        max-width: 90%;
+        min-height: auto;
+        max-height: none;
+        border-radius: 15px;
+    }
+
+    #catalogo-juegos h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .genres {
+        text-align: center; /
+        width: 100%;
+    }
+
+    .genres h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .genres ul {
+        padding-left: 10px;
+    }
+
+    .genres li {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+}
+
+
+
+
+/* -------------------------- Consolas -------------------------*/
+
+#consolas-disponibles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80vh;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+/* Contenedor de la sección con fondo blanco y bordes redondeados */
+.contenedor-seccion {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Agregar un ícono antes del título */
+.contenedor-seccion::before {
+    content: "🎮";
+    font-size: 3rem;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Título */
+#consolas-disponibles h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    color: #6a1b9a;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Press Start 2P', sans-serif;
+    letter-spacing: 3px;
+}
+
+/* Contenedor de las consolas (grid de consolas) */
+.consolas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    width: 100%;
+}
+
+/* Estilo para cada consola */
+.consola {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 250px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    font-family: 'Press Start 2P', sans-serif;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+/* Efecto hover para las consolas */
+.consola:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los títulos dentro de cada consola */
+.consola h3 {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    color: #333;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Estilos para los párrafos dentro de las consolas */
+.consola p {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    color: #555;
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Estilos para las listas dentro de las consolas */
+.consola ul {
+    padding-left: 20px;
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.consola ul li {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    color: #555;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* Efecto hover para los elementos de la lista */
+.consola ul li:hover {
+    color: #6a1b9a;
+    cursor: pointer;
+}
+
+/* Estilo para las imágenes dentro de cada consola */
+.imagen-consola {
+    margin-top: 20px;
+    position: relative;
+}
+
+.consola-img {
+    width: 100%;
+    max-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.consola-img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive: Cambiar a una sola columna en pantallas pequeñas */
+@media (max-width: 768px) {
+    .consolas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #consolas-disponibles h2 {
+        font-size: 2rem;
+    }
+
+    .consola {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .contenedor-seccion {
+        padding: 15px;
+    }
+}
+
+/* Responsive: Ajuste para pantallas medianas */
+@media (max-width: 1024px) {
+    .consolas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .consola {
+        width: 100%;
+    }
+}
+
+
+
+
+/* ----------------------Sección de contacto ------------------ */
+
+#contacto,
+#contacto * {
+    box-sizing: border-box;
+}
+
+/* Contenedor principal de contacto */
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 140px;
+    width: 100%;
+    transform: translateX(0%);
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+
+/* Contenedor principal que agrupa el GIF y el formulario */
+.formulario-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Press Start 2P', sans-serif;
+    text-align: center;
+    margin-top: -20vh;
+}
+
+/* GIF del gato centrado justo encima del formulario */
+
+.gif-gato {
+    display: flex;
+    position: relative;
+    top: -10vh;
+    width: 270px;
+    height: auto;
+    z-index: 2;
+    max-width: 90%;
+}
+
+/* Estilo para el título del formulario */
+#contacto h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    color: #6a1b9a;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Estilos para el formulario */
+form {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+/* Campos de entrada */
+input[type="text"], input[type="email"], textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 90%;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #6a1b9a;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Estilo para el botón */
+button {
+    padding: 10px 20px;
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #9c4d97;
+}
+
+/* Media Queries para diseño responsive */
+@media (max-width: 768px) {
+    .formulario-container {
+        padding: 20px;
+    }
+
+    .gif-gato {
+        max-width: 200px;
+        margin: 0 auto 10px auto;
+    }
+}
+
+
+
+
+
+/* Posicionamiento de los GIFs a la derecha */
+.gif-derecha {
+    position: absolute;
+    top: 430px;
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gif-derecha-img {
+    width: 450px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.gif-derecha2 {
+    position: absolute;
+    top: 800px;
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.gif-derecha2-img {
+    width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .gif-derecha {
+        right: 2%;
+
+    }
+    .gif-derecha-img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .gif-derecha2 {
+        right: 2%;
+    }
+    .gif-derecha2-img {
+        max-width: 80%;
+    }
+}
+
+
+/* ------------------- Video responsive ---------------- */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 5px rgba(138, 43, 226, 0.7);
+    background: #1c003d;
+    border: 3px solid #6a1b9a;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    bottom: 100px;
+
+
+
+}
+
+/* Contenedor del iframe */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+/* Estilo del iframe */
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Título del video */
+.video-container h2 {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    background: #6a1b9a;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .video-container {
+        max-width: 100%;
+    }
+
+    .video-container h2 {
+        font-size: 1.2rem;
+    }
+}
