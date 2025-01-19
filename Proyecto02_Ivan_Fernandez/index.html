@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game Store</title>
+    <link rel="stylesheet" href="css/style.css" media="all">
+
+    <!-- Por alguna razon no me deja establecer un fondo de pantalla en el css asi que lo pongo aqui -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans Condensed', sans-serif;
+            background-image: url('images/background.jpg'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Header con Banner y Menu -->
+<header class="header">
+    <!-- Banner -->
+    <div class="banner">
+        <img src="images/banner.gif" alt="Video Game Store Banner" width="100%">
+    </div>
+
+    <!-- Menu -->
+    <nav class="menu menu-4">
+        <div class="menu-container">
+            <!-- GIF pequeño a la izquierda -->
+            <div class="menu-gif">
+                <img src="images/may.gif" alt="GIF Pequeño">
+            </div>
+
+            <!-- Botón para desplegar el menú en pantallas pequeñas -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- Menú de navegación -->
+            <ul id="menu" class="menu-list">
+                <li><a href="index.html">Historia de los Videojuegos</a></li>
+                <li><a href="juegos_disponibles.html">Juegos disponibles</a></li>
+                <li><a href="consolas.html">Consolas disponibles</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+    <!-- Fake publicidad -->
+    <div class="publicidad1">
+        <button class="cerrar" onclick="cerrarPublicidad('publicidad1')">X</button>
+        <img src="images/magneto.gif" alt="Publicidad Falsa1" class="img-publicidad1">
+    </div>
+
+
+    <section id="historia-videojuegos">
+        <img src="images/pikachu.gif" alt="Pikachu" class="pikachu">
+        <h2>Historia de los Videojuegos</h2>
+
+        <article class="historia">
+            <h3>Los Inicios (1950-1970)</h3>
+            <p>Los videojuegos comenzaron a gestarse a mediados del siglo XX. Durante las décadas de 1950 y 1960, los primeros experimentos con pantallas electrónicas y programación informática dieron origen a los primeros "juegos" en laboratorio, como <i>Spacewar!</i>, creado en 1962.</p>
+        </article>
+
+        <article class="historia">
+            <h3>La Edad Dorada de los Arcades (1970-1980)</h3>
+            <p>A finales de los años 70 y principios de los 80, los videojuegos arcade como <i>Space Invaders</i> (1978), <i>Pac-Man</i> (1980) y <i>Donkey Kong</i> (1981) se convirtieron en fenómenos globales.</p>
+        </article>
+
+        <article class="historia">
+            <h3>La Crisis de los Videojuegos (1983-1985)</h3>
+            <p>En 1983, la industria de los videojuegos enfrentó una crisis debido a la sobreproducción de consolas y juegos de baja calidad.</p>
+        </article>
+
+        <article class="historia">
+            <h3>Franquicias Icónicas</h3>
+            <ul>
+                <li><strong>Super Mario:</strong> Creado por Nintendo en 1985.</li>
+                <li><strong>The Legend of Zelda:</strong> Lanzado en 1986.</li>
+                <li><strong>Grand Theft Auto:</strong> Conocido por su jugabilidad en un mundo abierto.</li>
+            </ul>
+        </article>
+
+        <article class="historia">
+            <h3>Impacto Cultural</h3>
+            <p>Los videojuegos no solo han cambiado la forma en que jugamos, sino también la forma en que interactuamos con el mundo, influyendo en el cine, la música y más.</p>
+        </article>
+    </section>
+
+    <!-- Otra publicidad -->
+    <div class="publicidad">
+        <button class="cerrar" onclick="cerrarPublicidad('publicidad')">X</button>
+        <img src="images/ryu.gif" alt="Publicidad Falsa" class="img-publicidad">
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="logo">
+        <img src="images/robert.gif" alt="Logo"> <!-- Logo aquí -->
+    </div>
+
+    <div class="footer-container">
+        <div class="footer-links">
+            <a href="/privacidad">Privacidad</a>
+            <a href="/legal">Legal</a>
+            <a href="/terminos">Términos</a>
+            <a href="/cookies">Política de cookies</a>
+            <a href="/ajustes-cookies">Ajustes de cookies</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/logotipos.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://youtube.com" target="_blank">
+                <img src="images/youtube.png" alt="YouTube">
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+<!-- JavaScript para el menú hamburguesa -->
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('active'); // Alterna la clase 'active' para mostrar/ocultar el menú
+    });
+
+    // Función para cerrar las publicidades
+    function cerrarPublicidad(id) {
+        var publicidad = document.querySelector(`.${id}`);
+        publicidad.style.display = 'none'; // Oculta la publicidad
+    }
+</script>
+</body>
+</html>

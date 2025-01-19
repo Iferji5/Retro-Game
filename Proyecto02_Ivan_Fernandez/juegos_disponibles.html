@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game Store</title>
+    <link rel="stylesheet" href="css/style.css" media="all">
+
+    <!-- Por alguna razon no me deja establecer un fondo de pantalla en el css asi que lo pongo aqui -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans Condensed', sans-serif;
+            background-image: url('images/background.jpg'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+
+</head>
+
+<body>
+<!-- Header con Banner y Menu -->
+<header class="header">
+    <!-- Banner -->
+    <div class="banner">
+        <img src="images/banner.gif" alt="Video Game Store Banner" width="100%">
+    </div>
+
+    <!-- Menu -->
+    <nav class="menu menu-4">
+        <div class="menu-container">
+            <!-- GIF pequeño a la izquierda -->
+            <div class="menu-gif">
+                <img src="images/may.gif" alt="GIF Pequeño">
+            </div>
+
+            <!-- Botón para desplegar el menú en pantallas pequeñas -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- Menú de navegación -->
+            <ul id="menu" class="menu-list">
+                <li><a href="index.html">Historia de los Videojuegos</a></li>
+                <li><a href="juegos_disponibles.html">Juegos disponibles</a></li>
+                <li><a href="consolas.html">Consolas disponibles</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+    <!-- Fake publicidad boton-->
+    <div class="publicidad1">
+        <button class="cerrar" onclick="cerrarPublicidad('publicidad1')">X</button>
+        <img src="images/magneto.gif" alt="Publicidad Falsa1" class="img-publicidad1">
+    </div>
+
+    <!-- Catalogo de juegos -->
+    <section id="catalogo-juegos">
+        <!-- Título del catálogo -->
+        <h2>Catálogo de Juegos</h2>
+
+        <!-- Contenedor de géneros de videojuegos -->
+        <div class="genres">
+            <h3>Géneros de Videojuegos</h3>
+            <ul>
+                <li>Aventura</li>
+                <li>Acción</li>
+                <li>RPG</li>
+                <li>Plataformas</li>
+                <li>Estrategia</li>
+                <li>Simulación</li>
+                <li>Deportes</li>
+                <li>Lucha</li>
+                <li>Disparos</li>
+                <li>Indie</li>
+            </ul>
+
+            <!-- Contenedor de Ditto -->
+            <div class="ditto">
+                <img src="images/ditto.gif" alt="GIF Promocional">
+            </div>
+        </div>
+    </section>
+    <!-- Contenedor separado para las imágenes -->
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="images/mario1.jpg" alt="Juego 1">
+            <div class="price">€19.99</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/mario2.jpg" alt="Juego 2">
+            <div class="price">€14.75</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/mario3.jpg" alt="Juego 3">
+            <div class="price">€25.50</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/rampage.jpg" alt="Juego 4">
+            <div class="price">€29.99</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/contra.jpg" alt="Juego 5">
+            <div class="price">€21.80</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/rangerx.jpg" alt="Juego 6">
+            <div class="price">€18.99</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/metroid.jpg" alt="Juego 7">
+            <div class="price">€22.30</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/gunman.jpg" alt="Juego 8">
+            <div class="price">€39.99</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/megaman.jpg" alt="Juego 9">
+            <div class="price">€14.50</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/sonic2.jpg" alt="Juego 10">
+            <div class="price">€39.99</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/mariokart.jpg" alt="Juego 11">
+            <div class="price">€13.99</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/bomberman.jpg" alt="Juego 12">
+            <div class="price">€9.99</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/bike.jpg" alt="Juego 13">
+            <div class="price">€18.00</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/ninja-turtles.jpg" alt="Juego 14">
+            <div class="price">€26.49</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/pacman.jpg" alt="Juego 15">
+            <div class="price">€30.00</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/snow-bros.jpg" alt="Juego 16">
+            <div class="price">€15.99</div>
+        </div>
+    </div>
+
+
+    <!-- Otra publicidad -->
+    <div class="publicidad">
+        <button class="cerrar" onclick="cerrarPublicidad('publicidad')">X</button>
+        <img src="images/ryu.gif" alt="Publicidad Falsa" class="img-publicidad">
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="logo">
+        <img src="images/robert.gif" alt="Logo"> <!-- Logo aquí -->
+    </div>
+
+    <div class="footer-container">
+        <div class="footer-links">
+            <a href="/privacidad">Privacidad</a>
+            <a href="/legal">Legal</a>
+            <a href="/terminos">Términos</a>
+            <a href="/cookies">Política de cookies</a>
+            <a href="/ajustes-cookies">Ajustes de cookies</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/logotipos.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://youtube.com" target="_blank">
+                <img src="images/youtube.png" alt="YouTube">
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+<!-- JavaScript para el menú hamburguesa -->
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('active'); // Alterna la clase 'active' para mostrar/ocultar el menú
+    });
+
+    // Función para cerrar las publicidades
+    function cerrarPublicidad(id) {
+        var publicidad = document.querySelector(`.${id}`);
+        publicidad.style.display = 'none'; // Oculta la publicidad
+    }
+</script>
+
+
+</body>
+</html>
+
